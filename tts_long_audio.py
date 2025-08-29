@@ -16,8 +16,7 @@ def synthesize_long_audio(text, output_gcs_uri, speaking_rate=1.0, input_gcs_uri
     voice_name = os.getenv("TTS_VOICE_NAME", "en-US-Wavenet-D")
     print(f"Using voice: {voice_name}")
     audio_config = texttospeech.AudioConfig(
-        audio_encoding=texttospeech.AudioEncoding.MP3,
-        # audio_encoding=texttospeech.AudioEncoding.LINEAR16,
+        audio_encoding=texttospeech.AudioEncoding.LINEAR16,
         speaking_rate=speaking_rate
     )
     voice = texttospeech.VoiceSelectionParams(
