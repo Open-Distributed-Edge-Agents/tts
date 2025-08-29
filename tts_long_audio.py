@@ -35,7 +35,7 @@ def synthesize_long_audio(text, output_gcs_uri, speaking_rate=1.0, input_gcs_uri
     )
     operation = client.synthesize_long_audio(request=request)
     print("Waiting for operation to complete...")
-    response = operation.result(timeout=1800)
+    response = operation.result(timeout=300)
     print(f"Audio content written to {output_gcs_uri}")
 
 def main():
